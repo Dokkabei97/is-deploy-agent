@@ -1,112 +1,96 @@
 [
   {
-    "service": "PAS",
+    "service": "Example",
+    "consoleInfo": {
+      "address": "localhost:3000"
+    },
+    "agentInfo": {
+      "name": "Example Agent",
+      "ip": "127.0.0.1",
+      "port": "5000"
+    },
+    "jenkinsURL": {
+      "basicURL": "",
+      "middleURL": "/lastSuccessfulBuild/artifact/",
+      "jobName": "",
+      "groupId": "",
+      "artifactId": "",
+      "version": ""
+    },
     "nodeList": [
       {
-        "name": "서버1",
+        "name": "Apache1",
         "ip": "127.0.0.1",
         "port": "8080",
-        "path": "C:/Apache24/conf/uriworkermap.properties",
+        "path": "/etc/apache2/uriworkermap.properties",
         "lbMap": [
           {
             "key": "/*",
             "value": "load_balancer"
           }
         ],
-        "jenkinsURL": {
-          "basicURL": "",
-          "middleURL": "/lastSuccessfulBuild/artifact/",
-          "jobName": "",
-          "groupId": "",
-          "artifactId": "",
-          "version": ""
-        },
         "podList": [
           {
-            "name": "WAS1",
+            "name": "Tomcat1",
             "excludeMap": [
-              {
-                "key": "/was1",
-                "value": "load_balancer1"
-              },
               {
                 "key": "/*",
                 "value": "load_balancer_ex1"
               }
             ],
-            "logPath": "C:/tomcat1/logs/",
-            "webappPath": "C:/tomcat1/webapps/",
-            "fileName": "web.war"
+            "logPath": "/etc/tomcat1/logs/catalina.out",
+            "webappPath": "/etc/tomcat1/webapps/",
+            "fileName": "ROOT.war"
           },
           {
-            "name": "WAS2",
+            "name": "Tomcat2",
             "excludeMap": [
-              {
-                "key": "/was2",
-                "value": "load_balancer2"
-              },
               {
                 "key": "/*",
                 "value": "load_balancer_ex2"
               }
             ],
-            "logPath": "C:/tomcat2/logs/",
-            "webappPath": "C:/tomcat2/webapps/",
-            "fileName": "web.war"
+            "logPath": "/etc/tomcat2/logs/catalina.out",
+            "webappPath": "/etc/tomcat2/webapps/",
+            "fileName": "ROOT.war"
           }
         ]
       },
       {
-        "name": "서버2",
+        "name": "Apache2",
         "ip": "127.0.0.2",
         "port": "8080",
-        "path": "C:/Apache24/conf/uriworkermap.properties",
+        "path": "/etc/apache2/uriworkermap.properties",
         "lbMap": [
           {
             "key": "/*",
             "value": "load_balancer"
           }
         ],
-        "jenkinsURL": {
-          "basicURL": "",
-          "middleURL": "/lastSuccessfulBuild/artifact/",
-          "jobName": "",
-          "groupId": "",
-          "artifactId": "",
-          "version": ""
-        },
         "podList": [
           {
-            "name": "WAS3",
+            "name": "Tomcat1",
             "excludeMap": [
-              {
-                "key": "/was3",
-                "value": "load_balancer_3"
-              },
               {
                 "key": "/*",
                 "value": "load_balancer_ex3"
               }
             ],
-            "logPath": "C:/tomcat3/logs/",
-            "webappPath": "C:/tomcat3/webapps/",
-            "fileName": "web.war"
+            "logPath": "/etc/tomcat1/logs/catalina.out",
+            "webappPath": "/etc/tomcat1/webapps/",
+            "fileName": "ROOT.war"
           },
           {
-            "name": "WAS4",
+            "name": "Tomcat2",
             "excludeMap": [
-              {
-                "key": "/was4",
-                "value": "load_balancer_4"
-              },
               {
                 "key": "/*",
                 "value": "load_balancer_ex4"
               }
             ],
-            "logPath": "C:/tomcat4/logs/",
-            "webappPath": "C:/tomcat4/webapps/",
-            "fileName": "web.war"
+            "logPath": "/etc/tomcat2/logs/catalina.out",
+            "webappPath": "/etc/tomcat2/webapps/",
+            "fileName": "ROOT.war"
           }
         ]
       }
